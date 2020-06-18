@@ -8,8 +8,8 @@
           </router-link>
         </div>
         <div class="nav">
-          <router-link to="/">登录</router-link> |
-          <router-link to="/about">注册</router-link> |
+          <router-link to="/">登录</router-link>  |
+          <router-link to="/about">注册</router-link>&nbsp;|
           <router-link to="/detal">关于</router-link>
         </div>
       </div>
@@ -24,6 +24,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+#app {
+  background-color: #f0f2f5;
 }
 ul{
   list-style: none;
@@ -43,7 +46,7 @@ a {
 .header .header-inner {
   align-items: center;
   height: 100%;
-  width: 98%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -54,4 +57,7 @@ a {
 .header .header-inner .nav, .header .header-inner .nav a {
   text-decoration: none;
   color: #b2b2b2;
-}</style>
+  font-size: 13px;
+  margin: 0 10px;
+}
+</style>

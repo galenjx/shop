@@ -1,5 +1,6 @@
 <template>
-  <div class="slide"  @mouseover="clearInv" @mouseleave="runInv">
+  <!-- <div class="slide"  @mouseover="clearInv" @mouseleave="runInv"> -->
+  <div class="slide"  @mouseover="clearInv">
     <div class="slilde-img">
         <a :href="slides[nowIndex].href">
             <!-- <transition :name="imgchange">
@@ -8,7 +9,7 @@
             <transition :name="oldImgchange">
               <img :src="slides[nowIndex-1].src" v-if="!isH"  />
             </transition> -->
-            <transition-group :name="imgchange" mode="out-in">
+            <transition-group :name="imgchange" :mode="mode" tag="div">
               <img v-for="(item,index) in slides" :src="item.src" :key="item.src" v-show="index == nowIndex" alt="">
             </transition-group>
         </a>
@@ -45,7 +46,8 @@ export default {
       nowIndex: 0,
       timeId: null,
       isH: false,
-      imgchange: 'preImgchange'
+      imgchange: 'preImgchange',
+      mode: 'out-in'
     }
   },
   computed: {
@@ -55,6 +57,12 @@ export default {
   },
   methods: {
     jumpTo (index) {
+      if (index > this.nowIndex) {
+        this.imgchange = 'nextImgchange'
+      }
+      if (index < this.nowIndex) {
+        this.imgchange = 'preImgchange'
+      }
       this.nowIndex = index
     },
     nextPage () {
@@ -81,7 +89,7 @@ export default {
   },
   mounted () {
     console.log(this.slides)
-    this.runInv()
+    // this.runInv()
   }
 }
 </script>
@@ -97,30 +105,36 @@ export default {
 }
 .nextImgchange-enter-active,
 .nextImgchange-leave-active {
-  transition: all 0.5s ease;
+  transition: all .5s ease;
 }
 
 .preImgchange-enter {
   opacity: 0;
   transform: translateX(-100%);
 }
+
 .preImgchange-leave-to {
   opacity: 0;
-  transform: translateX(100%);
   position: absolute;
+  transform: translateX(100%);
 }
 .preImgchange-enter-active,
 .preImgchange-leave-active {
-  transition: all 0.5s ease;
+  transition: all .5s ease;
 }
 
 .slide {
   width: 900px;
-  height: 506px;
   position: relative;
 }
 .slide-img {
     overflow: hidden;
+    height: 506px;
+    div {
+      height: 506px;
+      img {
+      }
+    }
 }
 .slide-pages {
   padding: 5px 0px;
