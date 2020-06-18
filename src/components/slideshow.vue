@@ -110,6 +110,7 @@ export default {
 
 .preImgchange-enter {
   opacity: 0;
+  position: absolute;
   transform: translateX(-100%);
 }
 

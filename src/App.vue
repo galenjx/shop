@@ -17,6 +17,9 @@
     <keep-alive>
       <router-view />
     </keep-alive>
+     <div class="app-foot">
+      <p>© 2016 fishenal MIT</p>
+    </div>
   </div>
 </template>
 
@@ -59,5 +62,14 @@ a {
   color: #b2b2b2;
   font-size: 13px;
   margin: 0 10px;
+}
+.app-foot {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  line-height: 80px;
+  background: #e3e4e8;
+  clear: both;
+  margin-top: 10px;
 }
 </style>

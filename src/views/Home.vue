@@ -248,7 +248,7 @@ export default {
 .home {
   .home-left .home-left-bottom {
     width: 270px;
-    height: 512px;
+    height: 498px;
     margin: 20px 0px;
     flex: 1;
     background-color: #fff;

@@ -62,6 +62,7 @@ export default {
 .detail {
     padding: 12px;
     width: 1200px;
+    margin: 0 auto;
     display: flex;
     background-color: #f0f2f5;
     // height: 1300px;
