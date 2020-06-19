@@ -1,14 +1,7 @@
 <template>
-  <!-- <div class="slide"  @mouseover="clearInv" @mouseleave="runInv"> -->
-  <div class="slide"  @mouseover="clearInv">
-    <div class="slilde-img">
+  <div class="slide"  @mouseover="clearInv" @mouseleave="runInv">
+    <div class="slide-img">
         <a :href="slides[nowIndex].href">
-            <!-- <transition :name="imgchange">
-              <img :src="slides[nowIndex].src" v-if="isH" />
-            </transition>
-            <transition :name="oldImgchange">
-              <img :src="slides[nowIndex-1].src" v-if="!isH"  />
-            </transition> -->
             <transition-group :name="imgchange" :mode="mode" tag="div">
               <img v-for="(item,index) in slides" :src="item.src" :key="item.src" v-show="index == nowIndex" alt="">
             </transition-group>
@@ -88,8 +81,8 @@ export default {
     }
   },
   mounted () {
-    console.log(this.slides)
-    // this.runInv()
+    // console.log(this.slides)
+    this.runInv()
   }
 }
 </script>
@@ -110,7 +103,6 @@ export default {
 
 .preImgchange-enter {
   opacity: 0;
-  position: absolute;
   transform: translateX(-100%);
 }
 
@@ -132,7 +124,9 @@ export default {
     overflow: hidden;
     height: 506px;
     div {
-      height: 506px;
+    height: 506px;
+    display: flex;
+    flex-wrap: nowrap;
       img {
       }
     }
