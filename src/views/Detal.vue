@@ -98,7 +98,7 @@ export default {
     .detail-right {
         width: 980px;
         flex: 5;
-        background-color: pink;
+        background-color: #f0f2f5;
     }
 }
 </style>
