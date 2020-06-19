@@ -81,7 +81,6 @@ export default {
     }
   },
   mounted () {
-    // console.log(this.slides)
     this.runInv()
   }
 }
@@ -127,8 +126,6 @@ export default {
     height: 506px;
     display: flex;
     flex-wrap: nowrap;
-      img {
-      }
     }
 }
 .slide-pages {
