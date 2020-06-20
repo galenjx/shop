@@ -49,7 +49,7 @@
         </div>
         <div class="price">500元</div>
       </div>
-      <div class="count-top-all "><el-button type = 'primary' size="small">立即购买</el-button></div>
+      <div class="count-top-all "><el-button type = 'primary' size="small" @click="open1">立即购买</el-button></div>
     </div>
     <div class="count-bottom">
         <div class="sales-board-des">
@@ -276,6 +276,15 @@ export default {
   methods: {
     handleChange (value) {
       console.log(value)
+    },
+    open1 () {
+      this.$message({
+        message: '恭喜你，购买成功',
+        type: 'success',
+        showClose: true,
+        offset: 100,
+        duration: 2000
+      })
     }
   }
 }
