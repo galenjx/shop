@@ -209,6 +209,8 @@ export default {
   margin: 20px;
   flex-direction: column;
   .home-left-top {
+    border-radius: 9px;
+    overflow: hidden;
     width: 270px;
     height: 357px;
     background-color: #fff;
@@ -247,6 +249,8 @@ export default {
 
 .home {
   .home-left .home-left-bottom {
+    border-radius: 9px;
+    overflow: hidden;
     width: 270px;
     height: 498px;
     margin: 20px 0px;
@@ -292,6 +296,8 @@ export default {
     height: 900px;
     margin: 20px 0px;
     .home-right-top {
+      border-radius: 9px;
+      overflow: hidden;
       overflow: hidden;
       background-color: #ffffff;
       width: 900px;
@@ -306,6 +312,8 @@ export default {
         margin-right: 14px;
       }
       .container {
+        border-radius: 9px;
+        overflow: hidden;
         background-color: #ffffff;
         width: 443px;
         height: 165px;

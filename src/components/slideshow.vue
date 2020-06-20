@@ -8,7 +8,7 @@
         </a>
     </div>
     <div class="slide-pages">
-      <h2>{{ slides[nowIndex].title }}</h2>
+      <!-- <h2>{{ slides[nowIndex].title }}</h2> -->
       <ul>
         <li @click="prePage">&lt;</li>
         <li
@@ -136,6 +136,7 @@ export default {
   position: absolute;
   bottom: 0px;
   display: flex;
+  flex-direction: row-reverse;
   width: 100%;
   justify-content: space-between;
   vertical-align: baseline;
