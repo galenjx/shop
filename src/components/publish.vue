@@ -24,7 +24,7 @@
       </div>
       <div class="count-top-all ">
         <div class="proMes">
-          所属行业
+          所属行业：
         </div>
         <div class="area">
           <el-select v-model="value" placeholder="请选择" size="small">
