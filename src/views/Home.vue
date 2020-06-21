@@ -124,22 +124,22 @@ export default {
         {
           id: 1,
           title: '新闻条目1新闻条目1新闻条目1新闻条目1xxxxxxx',
-          url: 'http://starcraft.com'
+          url: 'https://github.com/galenjx'
         },
         {
           id: 2,
           title: '新闻条目2新闻条目2新闻条目2新闻条目2',
-          url: 'http://warcraft.com'
+          url: 'https://github.com/galenjx'
         },
         {
           id: 3,
           title: '新闻条3新闻条3新闻条3',
-          url: 'http://overwatch.com'
+          url: 'https://github.com/galenjx'
         },
         {
           id: 4,
           title: '新闻条4广告发布',
-          url: 'http://hearstone.com'
+          url: 'https://github.com/galenjx'
         }
       ],
       productList: {
@@ -148,20 +148,20 @@ export default {
           list: [
             {
               name: '数据统计',
-              url: 'http://starcraft.com'
+              url: 'https://github.com/galenjx'
             },
             {
               name: '数据预测',
-              url: 'http://warcraft.com'
+              url: 'https://github.com/galenjx'
             },
             {
               name: '流量分析',
-              url: 'http://overwatch.com',
+              url: 'https://github.com/galenjx',
               hot: true
             },
             {
               name: '广告发布',
-              url: 'http://hearstone.com'
+              url: 'https://github.com/galenjx'
             }
           ]
         },
@@ -171,20 +171,20 @@ export default {
           list: [
             {
               name: '91助手',
-              url: 'http://weixin.com'
+              url: 'https://github.com/galenjx'
             },
             {
               name: '产品助手',
-              url: 'http://twitter.com',
+              url: 'https://github.com/galenjx',
               hot: true
             },
             {
               name: '智能地图',
-              url: 'http://maps.com'
+              url: 'https://github.com/galenjx'
             },
             {
               name: '团队语音',
-              url: 'http://phone.com'
+              url: 'https://github.com/galenjx'
             }
           ]
         }
