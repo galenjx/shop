@@ -7,13 +7,13 @@
         <div class="proMes">
           购买数量：
         </div>
-        <div class="area">
+        <div class="area right">
           <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" size="small"></el-input-number>
         </div>
       </div>
       <div class="count-top-all">
         <div class="proMes">产品版本:</div>
-        <div class="product">
+        <div class="product right">
           <el-radio-group v-model="radio3" size="small">
             <el-radio-button label="初级版"></el-radio-button>
             <el-radio-button label="中级版"></el-radio-button>
@@ -26,7 +26,7 @@
         <div class="proMes">
           所属行业：
         </div>
-        <div class="area">
+        <div class="area right">
           <el-select v-model="value" placeholder="请选择" size="small">
             <el-option
               v-for="item in options"
@@ -41,15 +41,19 @@
         <div class="proMes">
           有效时间：
         </div>
-        <div class="duration">半年</div>
+        <div class="duration right">半年</div>
       </div>
       <div class="count-top-all">
         <div class="proMes">
           总价：
         </div>
-        <div class="price">500元</div>
+        <div class="price right">500元</div>
       </div>
-      <div class="count-top-all "><el-button type = 'primary' size="small" @click="open1">立即购买</el-button></div>
+      <div class="count-top-all ">
+        <div class="proMes">
+        </div>
+        <div class="price right"><el-button type = 'primary' size="small" @click="open1">立即购买</el-button></div>
+        </div>
     </div>
     <div class="count-bottom">
         <div class="sales-board-des">
@@ -290,80 +294,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.count-top{
-  border-radius: 10px;
-  padding: 21px 0px 38px 32px;
-  background-color: #fff;
-  h2 {
-    font-size: 20px;
-    padding: 20px 0px;
-  }
-  p {
-    background: #f7fcff;
-    padding: 10px 0px;
-    color: #999;
-    line-height: 1.8;
-  }
-  .count-top-all {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 14px;
-    .product {
-      padding-left: 20px;
-    }
-    .duration {
-      padding-left: 14px;
-    }
-    .area {
-      padding-left: 10px;
-    }
-    .price {
-      padding-left: 41px;
-    }
-    .el-button {
-      // padding-left: px !important;
-      margin-left: 100px;
-    }
-    div {
-      margin-right: 20px;
-      // vertical-align: baseline !important;
-      // margin-top: 0px !important;
-    }
-  }
-}
-.count-bottom {
-  background-color: #fff;
-  .sales-board-des {
-  border-top: 20px solid #f0f2f5;
-  padding: 15px 20px;
-}
-.sales-board-des p {
-  line-height: 1.6;
-}
-.sales-board-des h2 {
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-.sales-board-des h3 {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 20px 0 10px 0;
-}
-.sales-board-des li {
-  padding: 5px 0;
-}
-.sales-board-table {
-  width: 100%;
-  margin-top: 20px;
-}
-.sales-board-table th {
-  background: #4fc08d;
-  color: #fff;
-}
-.sales-board-table td {
-    border: 1px solid #f0f2f5;
-    padding: 15px;
-}
-}
 </style>

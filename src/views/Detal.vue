@@ -67,7 +67,7 @@ export default {
     background-color: #f0f2f5;
     // height: 1300px;
     .detail-left {
-        border-radius: 4%;
+        // border-radius: 4%;
         height: 60%;
         margin-right: 12px;
         flex: 1;
@@ -98,6 +98,7 @@ export default {
         }
     }
     .detail-right {
+        border-radius: 4%;
         width: 980px;
         flex: 5;
         background-color: #f0f2f5;

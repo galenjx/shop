@@ -1,23 +1,21 @@
 <template>
   <div class="count">
     <div class="count-top">
-      <h2>数据统计</h2>
-      <p class="count-top-detal">历史资料、科学实验、检验、统计等所获得的和用于科学研究、技术设计、查证、决策等的数值加以统计为解决方案做前期准备。</p>
-      <div class="count-top-all">
-        <div class="proMes">产品类型:</div>
-        <div class="product">
-          <el-radio-group v-model="radio3" size="small">
-            <el-radio-button label="绿色版"></el-radio-button>
-            <el-radio-button label="红色版"></el-radio-button>
-            <el-radio-button label="紫色版"></el-radio-button>
-          </el-radio-group>
+      <h2>流量分析</h2>
+      <p class="count-top-detal">是指在获得网站访问量基本数据的情况下对有关数据进行统计、分析，从中发现用户访问网站的规律，并将这些规律与网络营销策略等相结合，从而发现目前网络营销活动中可能存在的问题，并为进一步修正或重新制定网络营销策略提供依据。当然这样的定义是站在网络营销管理的角度来考虑的</p>
+      <div class="count-top-all ">
+        <div class="proMes">
+          购买数量：
+        </div>
+        <div class="area right">
+          <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" size="small"></el-input-number>
         </div>
       </div>
       <div class="count-top-all ">
         <div class="proMes">
-          适用地区：
+          产品类型：
         </div>
-        <div class="area">
+        <div class="area right">
           <el-select v-model="value" placeholder="请选择" size="small">
             <el-option
               v-for="item in options"
@@ -29,212 +27,42 @@
         </div>
       </div>
       <div class="count-top-all">
-        <div class="proMes">
-          有效时间：
+        <div class="proMes">有效时间:</div>
+        <div class="product right">
+          <el-radio-group v-model="radio3" size="small">
+            <el-radio-button label="半年"></el-radio-button>
+            <el-radio-button label="一年"></el-radio-button>
+            <el-radio-button label="三年"></el-radio-button>
+          </el-radio-group>
         </div>
-        <div class="duration">半年</div>
+      </div>
+      <div class="count-top-all">
+        <div class="proMes">产品版本:</div>
+        <div class="product right">
+          <el-radio-group v-model="radio4" size="small">
+            <el-radio-button label="客户版"></el-radio-button>
+            <el-radio-button label="代理商版"></el-radio-button>
+            <el-radio-button label="专家版"></el-radio-button>
+          </el-radio-group>
+        </div>
       </div>
       <div class="count-top-all">
         <div class="proMes">
           总价：
         </div>
-        <div class="price">500元</div>
+        <div class="price right">678元</div>
       </div>
-      <div class="count-top-all "><el-button type = 'primary' size="small" @click="open1">立即购买</el-button></div>
+      <div class="count-top-all ">
+        <div class="proMes">
+        </div>
+        <div class="price right"><el-button type = 'primary' size="small" @click="open1">立即购买</el-button></div>
+        </div>
+      <!-- </div> -->
     </div>
     <div class="count-bottom">
-        <div class="sales-board-des">
+      <div class="sales-board-des">
         <h2>产品说明</h2>
-        <p>历史资料、科学实验、检验、统计等所获得的和用于科学研究、技术设计、查证、决策等的数值加以统计为解决方案做前期准备。</p>
-        <table class="sales-board-table">
-          <tbody>
-              <tr class="ui-table-row">
-                  <td class="col-first">
-                      <div class="intro-pic">
-                          <label>安全安保</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>办公文教</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>彩票</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>车辆物流</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>成人用品</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>出版传媒</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>电脑硬件</label>
-                      </div>
-                  </td>
-              </tr>
-              <tr class="ui-table-row">
-                  <td class="col-first">
-                      <div class="intro-pic">
-                          <label>电子电工</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>房地产建筑装修</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>分类平台</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>服装鞋帽</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>箱包饰品</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>化工原料制品</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>机械设备</label>
-                      </div>
-                  </td>
-              </tr>
-              <tr class="ui-table-row">
-                  <td class="col-first">
-                      <div class="intro-pic">
-                          <label>家庭日用品</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>家用电器</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>教育培训</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>节能环保</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>金融服务</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>礼品</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>旅游住宿</label>
-                      </div>
-                  </td>
-              </tr>
-              <tr class="ui-table-row">
-                  <td class="col-first">
-                      <div class="intro-pic">
-                          <label>美容化妆</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>母婴护理</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>农林牧渔</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>软件</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>商务服务</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>生活服务</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>食品保健品</label>
-                      </div>
-                  </td>
-              </tr>
-              <tr class="ui-table-row">
-                  <td class="col-first">
-                      <div class="intro-pic">
-                          <label>手机数码</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>通讯服务设备</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>网络服务</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>医疗服务</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>游戏</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>运动休闲娱乐</label>
-                      </div>
-                  </td>
-                  <td>
-                      <div class="intro-pic">
-                          <label>招商加盟</label>
-                      </div>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
+        <p>2020年的一天，在你驱车前往公司的路上，导航系统通过预测交通流量，会自动帮你选择一条最合适的交通路线；车内推荐系统会根据你的饮食习惯预测你可能会喜欢吃什么，并推荐沿途的早餐店；你的电子社交助理已经为你自动选择了你可能感兴趣的社交网信息；当车内系统预测到你驾车有些分心时，座椅会自动震动进行提醒…… 以上这些情景不是科幻大片独有的，它们有的已经或会在未来的某一天成为现实。而这一切所倚靠的就是预测分析技术。 大数据时代下，作为其核心，预测分析已在商业和社会中得到广泛应用。随着越来越多的数据被记录和整理，未来预测分析必定会成为所有领域的关键技术。 作为预测分析领域的专家，埃里克·西格尔博士深谙预测分析界已经实现和正在发生的事情、面临的问题和将来可能的前景。在《大数据预测》一书中，他结合预测分析的应用实例，对其进行了深入、细致且全面的解读。 关于预测分析，你想了解的全部，你的生活以及这个世界会因为预测分析改变到什么程度，《大数据预测》都会告诉你。</p>
       </div>
     </div>
   </div>
@@ -243,27 +71,26 @@
 export default {
   data () {
     return {
-      radio3: '绿色版',
+      radio3: '半年',
+      radio4: '客户版',
       options: [{
         value: '选项1',
-        label: '北京'
+        label: '入门版'
       }, {
         value: '选项2',
-        label: '上海'
+        label: '中级版'
       }, {
         value: '选项3',
-        label: '天津'
-      }, {
-        value: '选项4',
-        label: '武汉'
-      }, {
-        value: '选项5',
-        label: '广州'
+        label: '高级版'
       }],
-      value: '北京'
+      value: '入门版',
+      num: 1
     }
   },
   methods: {
+    handleChange (value) {
+      console.log(value)
+    },
     open1 () {
       this.$message({
         message: '恭喜你，购买成功',
@@ -278,7 +105,6 @@ export default {
 </script>
 <style lang="scss">
 .count-top{
-  border-radius: 10px;
   padding: 21px 0px 38px 32px;
   background-color: #fff;
   h2 {
@@ -296,26 +122,23 @@ export default {
     align-items: center;
     margin-top: 20px;
     font-size: 14px;
+    .proMes {
+      flex: 1;
+    }
+    .right {
+      flex: 8;
+    }
     .product {
-      padding-left: 20px;
+      padding-left: 0px;
     }
     .duration {
-      padding-left: 14px;
+      padding-left: 0px;
     }
     .area {
-      padding-left: 10px;
+      padding-left: 0px;
     }
     .price {
-      padding-left: 41px;
-    }
-    .el-button {
-      // padding-left: px !important;
-      margin-left: 100px;
-    }
-    div {
-      margin-right: 20px;
-      // vertical-align: baseline !important;
-      // margin-top: 0px !important;
+      padding-left: 0px;
     }
   }
 }
@@ -324,33 +147,33 @@ export default {
   .sales-board-des {
   border-top: 20px solid #f0f2f5;
   padding: 15px 20px;
-}
-.sales-board-des p {
+  p {
   line-height: 1.6;
-}
-.sales-board-des h2 {
+  }
+  h2 {
   font-size: 20px;
   padding-bottom: 15px;
-}
-.sales-board-des h3 {
+  }
+  h3 {
   font-size: 18px;
   font-weight: bold;
   padding: 20px 0 10px 0;
-}
-.sales-board-des li {
+  }
+  li {
   padding: 5px 0;
-}
+  }
+  }
 .sales-board-table {
   width: 100%;
   margin-top: 20px;
-}
-.sales-board-table th {
+  th {
   background: #4fc08d;
   color: #fff;
-}
-.sales-board-table td {
+  }
+  td {
     border: 1px solid #f0f2f5;
     padding: 15px;
+  }
 }
 }
 </style>

@@ -14,13 +14,13 @@
         </div>
       </div>
     </div>
-    <!-- <keep-alive> -->
+    <keep-alive>
     <router-view />
-    <!-- </keep-alive> -->
+    </keep-alive>
     <div class="app-foot">
       <p>© 2016 fishenal MIT</p>
     </div>
-    <el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible">
+    <el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible" width = '20%'>
       <el-form :model="form">
         <el-form-item label="用户名" :label-width="formLabelWidth">
           <el-input v-model="form.name" autocomplete="off"></el-input>
